@@ -28,9 +28,9 @@ int getdirentries_common(int fd, void *bufp, size_t bufsize, ssize_t *bytesread,
     char rootpath[1024]; _bzero(rootpath, sizeof(rootpath));
     int pathlen = sizeof(rootpath);
     
-    //void *vp = vnode_getfromfd(fd);
+    void *vp = vnode_getfromfd(fd);
     void *ctx = vfs_context_current();
-    void *vp = vnode_getfromfd_ctx(fd, ctx);
+    //void *vp = vnode_getfromfd_ctx(fd, ctx);
     
     //xprintf("got vp %x\n", vp);
     if (!vp) goto orig;

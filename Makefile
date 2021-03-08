@@ -2,6 +2,7 @@ SDK = $(shell xcrun --sdk iphoneos --show-sdk-path)
 CC = $(shell xcrun --sdk $(SDK) --find clang)
 CFLAGS = -isysroot $(SDK) -arch arm64 -Wno-string-plus-int -fno-stack-protector -Wno-deprecated-declarations
 CFLAGS += -Wno-shorten-64-to-32 -D_FORTIFY_SOURCE=0
+CFLAGS += -mllvm -align-all-functions=5
 
 mkfile_path := $(abspath $(lastword $(MAKEFILE_LIST)))
 mkfile_dir := $(dir $(mkfile_path))

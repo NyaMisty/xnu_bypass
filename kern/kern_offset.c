@@ -27,12 +27,14 @@ int (*build_path_with_parent)(void *first_vp, void *parent_vp, char *buff, int b
 
 uint64_t kernel_slide;
 
+//struct offsets OOO = { -1, -1, -1, -1 };
 struct offsets OOO = { 0 };
 
 // must be UNSLID!
 void *open1_hook_addr = 0xFFFFFFF007D99268;
 void *stat_hook_addr = 0xFFFFFFF007D9E374;
 void *getdirentries_hook_addr = 0xFFFFFFF007DA3450;
+void *ptrace_hook_addr = 0xFFFFFFF00801A7A4;
 
 #pragma clang diagnostic pop
 

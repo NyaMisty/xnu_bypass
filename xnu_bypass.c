@@ -1,6 +1,7 @@
 #include <kern/kern_func.h>
 #include <kern/kern_hook.h>
 #include <hooks/hooks.h>
+#include <filter/filters.h>
 
 int main(int argc, char **argv){
     int ret;
@@ -9,6 +10,8 @@ int main(int argc, char **argv){
         return 1;
     }
     printf("init_xnuspy success\n");
+
+    init_filters();
     
     if((ret = init_kern_func())){
         printf("init_kern_func failed: %s\n", strerror(errno));

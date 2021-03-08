@@ -19,6 +19,10 @@ int install_all_hooks() {
         printf("Could not hook getdirent: %s\n", strerror(errno));
         return 1;
     }
+    if(( ret = install_hook(ptrace_hook_addr, ptrace_, &ptrace_orig) )){
+        printf("Could not hook ptrace: %s\n", strerror(errno));
+        return 1;
+    }
     return 0;
 
 #pragma clang diagnostic pop

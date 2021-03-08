@@ -38,5 +38,6 @@ extern struct offsets OOO;
 extern void *open1_hook_addr;
 extern void *stat_hook_addr;
 extern void *getdirentries_hook_addr;
+extern void *ptrace_hook_addr;
 
 extern int init_kernel_offset(void);
