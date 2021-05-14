@@ -8,7 +8,7 @@
 extern int check_caller(const char *p);
 extern int check_path(const char *p);
 
-extern void init_caller_filter(char *temp);
-extern void init_path_filter(char *temp);
+extern void init_caller_filter(char **temp);
+extern void init_path_filter(char **temp);
 
 extern int init_filters();

@@ -19,6 +19,6 @@ int check_path(const char *p) {
     return 0;
 }
 
-void init_path_filter(char *temp) {
+void init_path_filter(char **temp) {
     memcpy(block_paths, temp, sizeof(block_paths));
 }

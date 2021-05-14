@@ -18,6 +18,6 @@ int check_caller(const char *p) {
     return 0;
 }
 
-void init_caller_filter(char *temp) {
+void init_caller_filter(char **temp) {
     memcpy(target_execs, temp, sizeof(target_execs));
 }
